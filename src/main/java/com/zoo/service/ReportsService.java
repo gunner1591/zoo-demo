@@ -16,17 +16,17 @@ public class ReportsService {
     @Autowired
     ReportsRepository reportsRepository;
 
-    public ResponseEntity getAnimalsWithoutRooms(String column, String order){
-        List<AnimalsDTO> animals = reportsRepository.getSortedList(Sort.by(Sort.Direction.fromString(order),column));
+    public ResponseEntity getAnimalsWithoutRooms(String column, String order) {
+        List<AnimalsDTO> animals = reportsRepository.getSortedList(Sort.by(Sort.Direction.fromString(order), column));
         return ResponseEntity.ok(animals);
     }
 
-    public ResponseEntity getAnimalsInRoom(String room, String column, String order){
-        List<AnimalsDTO> animals = reportsRepository.getSortedListAnimals(room, (Sort.by(Sort.Direction.fromString(order),column)));
+    public ResponseEntity getAnimalsInRoom(String room, String column, String order) {
+        List<AnimalsDTO> animals = reportsRepository.getSortedListAnimals(room, (Sort.by(Sort.Direction.fromString(order), column)));
         return ResponseEntity.ok(animals);
     }
 
-    public ResponseEntity getFavRoomsList(String id){
+    public ResponseEntity getFavRoomsList(String id) {
         List<RoomsDTO> rooms = reportsRepository.getFavRoomsList(id);
         return ResponseEntity.ok(rooms);
     }

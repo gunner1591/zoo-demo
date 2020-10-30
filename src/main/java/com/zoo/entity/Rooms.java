@@ -2,7 +2,6 @@ package com.zoo.entity;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "rooms")
 public class Rooms {
@@ -19,10 +18,6 @@ public class Rooms {
 
     @Column(name = "type")
     private String type;
-
-   /* @JoinColumn(name = "r_id")
-    @OneToMany(targetEntity = Animals.class, cascade = CascadeType.ALL)
-    private List<Animals> animals;*/
 
     public String getId() {
         return this.id;
@@ -55,11 +50,4 @@ public class Rooms {
     public void setType(String type) {
         this.type = type;
     }
-/*public List<Animals> getAnimals() {
-        return animals;
-    }
-
-    public void setAnimals(List<Animals> animals) {
-        this.animals = animals;
-    }*/
 }

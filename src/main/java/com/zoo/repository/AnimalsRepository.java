@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-public interface AnimalsRepository extends JpaRepository<Animals,Long> {
+public interface AnimalsRepository extends JpaRepository<Animals, Long> {
     Optional<Animals> findByTitle(String title);
 
     @Modifying

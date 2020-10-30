@@ -3,14 +3,14 @@ package com.zoo.dto;
 import java.time.LocalDate;
 
 public class AnimalsDTO {
+    private String title;
+
+    private LocalDate dateAdded;
+
     public AnimalsDTO(String title, LocalDate dateAdded) {
         this.title = title;
         this.dateAdded = dateAdded;
     }
-
-    private String title;
-
-    private LocalDate dateAdded;
 
     public LocalDate getDateAdded() {
         return dateAdded;
@@ -28,4 +28,4 @@ public class AnimalsDTO {
         this.title = title;
     }
 
-   }
+}

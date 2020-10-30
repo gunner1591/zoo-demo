@@ -1,6 +1,5 @@
 package com.zoo.entity;
 
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -39,9 +38,7 @@ public class Animals {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
     public String getSpecies() {
         return species;
